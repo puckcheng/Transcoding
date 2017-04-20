@@ -7,10 +7,10 @@ import mvsfunc as mvf
 core = vs.get_core(accept_lowercase=True,threads=8)
 #接受小写以及设定线程数
 
-core.max_cache_size=10000
+core.max_cache_size=8000
 #最大使用内存
 
-Source="D:\\Media\\FILM\\1920s\\Seven.Chances.1925\\Seven.Chances.1925.720p.Blu-Ray.x264-GABE.mkv"
+Source="Z:\\FILM\\1920s\\Aleksandrov, Eisenstein - Oktyabr [1928]\\Oktyabr.avi"
 #源文件地址
 
 src=core.lsmas.LWLibavSource(Source,threads=1)
