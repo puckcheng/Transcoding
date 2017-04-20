@@ -10,7 +10,7 @@ core = vs.get_core(accept_lowercase=True,threads=8)
 core.max_cache_size=10000
 #最大使用内存
 
-Source="D:\\Media\\FILM\\1920s\\Nanook.Of.The.North.1922\\Nanook.Of.The.North.1922.720p.BluRay.AVC-mfcorrea.mkv"
+Source="D:\\Media\\FILM\\1920s\\Seven.Chances.1925\\Seven.Chances.1925.720p.Blu-Ray.x264-GABE.mkv"
 #源文件地址
 
 src=core.lsmas.LWLibavSource(Source,threads=1)
