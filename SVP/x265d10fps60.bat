@@ -1,4 +1,4 @@
-@ECHO OFF & CD/D "%~dp0"
+@ECHO OFF & CD/D "%~dp1"
 
 echo Cores=16 > %~dpn1.avs
 echo SetMemoryMax(8000) >> %~dpn1.avs
