@@ -10,7 +10,7 @@ core = vs.get_core(accept_lowercase=True,threads=8)
 core.max_cache_size=8000
 #最大使用内存
 
-Source="Z:\\FILM\\1920s\\Aleksandrov, Eisenstein - Oktyabr [1928]\\Oktyabr.avi"
+Source="Z:\\FILM\\1920s\\Christensen.Benjamin.Häxan[1922]\\Christensen.Benjamin.Häxan[1922].avi"
 #源文件地址
 
 src=core.lsmas.LWLibavSource(Source,threads=1)
