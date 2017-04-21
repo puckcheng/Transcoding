@@ -24,7 +24,7 @@ SetLocal EnableDelayedExpansion
 SetLocal DisableDelayedExpansion
 ping 127.0.0.1 -n 2
 
-"C:\Program Files (x86)\VapourSynth\core64\vspipe.exe" --y4m "PreFlow.vpy"  - | "C:\Program Files (x86)\MeGUI_2715_x86\tools\x265\x64\x265.exe" --y4m --preset slow --frame-threads 8 --crf 20 --deblock 0:0 -D 10 --merange 44 --aq-strength 0.8 --qcomp 0.65 --output "%~dpn1.hevc" -
+"C:\Program Files (x86)\VapourSynth\core64\vspipe.exe" --y4m "PreFlow.vpy"  - | "C:\Program Files (x86)\MeGUI_2715_x86\tools\x265\x64\x265.exe" --y4m --preset slow --frame-threads 8 --crf 20 --deblock 0:0 -D 10 --merange 44 --aq-strength 0.8 --qcomp 0.65 --output "D:\Media\TEMP\%~n1.hevc" -
 
 pause
 pause
