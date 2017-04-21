@@ -47,4 +47,4 @@ BM3D=mvf.BM3D(src,sigma=[3,3,3],radius1=0)
 #加字幕
 
 
-BM3D.set_output()
+BM3D.set_output() 
