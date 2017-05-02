@@ -12,4 +12,6 @@ ret=core.d2v.Source(input)
 
 clip=haf.QTGMC(ret, Preset='Slow', TFF=True)
 
+SelectEven()
+
 clip.set_output()
