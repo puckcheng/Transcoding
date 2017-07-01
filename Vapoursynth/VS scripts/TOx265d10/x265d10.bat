@@ -9,7 +9,7 @@ echo core.max_cache_size=8000 >> "%~dpn1.vpy"
 echo Source=r'%~dpn1%~x1' >> "%~dpn1.vpy"
 echo src=core.lsmas.LWLibavSource(Source,threads=1) >> "%~dpn1.vpy"
 echo src=core.std.SetFrameProp(src,prop="_FieldBased",intval=0) >> "%~dpn1.vpy"
-echo BM3D=mvf.BM3D(src,sigma=[3,3,3],radius1=0) >> "%~dpn1.vpy"
+echo BM3D=mvf.BM3D(src,sigma=[3,3,3],radius1=0,profile1="fast") >> "%~dpn1.vpy"
 echo BM3D.set_output() >> "%~dpn1.vpy"
 
 Echo Building File Index......
