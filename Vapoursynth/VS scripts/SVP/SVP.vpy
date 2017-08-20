@@ -6,10 +6,10 @@ core = vs.get_core(accept_lowercase=True,threads=8)
 core.max_cache_size=10000
 
 
-clip = core.ffms2.Source(source=r'\\SERVER-9527\Media\Others\IMAX.mkv')
+clip = core.ffms2.Source(source=r'C:\Users\PUCK\Desktop\IMAX.mkv')
 clip = clip.resize.Bicubic(format=vs.YUV420P8)
 
-super_params="{pel:1,gpu:1}"
+super_params="{pel:1,gpu:0}"
 analyse_params="{gpu:1,block:{w:8,h:8}}"
 smoothfps_params="{rate:{num:5,den:2}}" #帧率的比例num/den=分子/分母
 
