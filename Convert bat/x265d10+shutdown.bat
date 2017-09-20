@@ -7,11 +7,9 @@ echo import mvsfunc as mvf >> "%~dpn1.vpy"
 echo core = vs.get_core(accept_lowercase=True,threads=8) >> "%~dpn1.vpy"
 echo core.max_cache_size=8000 >> "%~dpn1.vpy"
 echo Source=r'%~dpn1%~x1' >> "%~dpn1.vpy"
-echo #src=core.lsmas.LWLibavSource(Source,threads=1) >> "%~dpn1.vpy"
-echo src=core.ffms2.Source(Source) >> "%~dpn1.vpy"
+echo src=core.lsmas.LWLibavSource(Source,threads=1) >> "%~dpn1.vpy"
 echo src=core.std.SetFrameProp(src,prop="_FieldBased",intval=0) >> "%~dpn1.vpy"
-echo #SM=haf.SMDegrain(src,tr=2,thSAD=300,contrasharp=True,chroma=False,plane=0) >> "%~dpn1.vpy"
-echo BM3D=mvf.BM3D(src,sigma=[3,6,6],radius1=0,profile1="fast") >> "%~dpn1.vpy"
+echo BM3D=mvf.BM3D(src,sigma=[6,10,10],radius1=0,profile1="fast") >> "%~dpn1.vpy"
 echo BM3D.set_output() >> "%~dpn1.vpy"
 
 Echo Building File Index......
@@ -23,10 +21,12 @@ ping 127.0.0.1 -n 1 >nul
 mshta vbscript:createobject("sapi.spvoice").speak("Job done!")(window.close)
 
 Echo Press [Space] to delete TEMP files
+
+shutdown -s -t 120
+
 pause
 del "%~dpn1.vpy"
 del "%~dpn1%~x1.lwi"
-del "%~dpn1%~x1.ffindex"
 Echo done!
 pause
 
